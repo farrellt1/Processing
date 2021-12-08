@@ -66,7 +66,10 @@ void draw() {
   fill(0, 0, 0);
   infoBox();
   try{
-  image(curr, 200, 200, 495, 495);
+    if(currPainting.num == 4){
+     curr.volume(0); 
+    }
+    image(curr, 200, 200, 495, 495);
   }catch(Exception e){
     println(curr);
   }
