@@ -61,14 +61,12 @@ void draw() {
       curr = currPainting.spin;
       break;
   }
+  curr.volume(0); 
   curr.loop();
   textSize(28);
   fill(0, 0, 0);
   infoBox();
   try{
-    if(currPainting.num == 4){
-     curr.volume(0); 
-    }
     image(curr, 200, 200, 495, 495);
   }catch(Exception e){
     println(curr);
